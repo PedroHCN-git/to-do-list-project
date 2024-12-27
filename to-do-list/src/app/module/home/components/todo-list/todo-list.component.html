@@ -1,8 +1,8 @@
-<div>
-    <ul>
-        <li>
-            <input class="box" type="checkbox">
-            <input class="txt" type="text">
+<div [ngClass]="{'loading': !taskList.length}">
+    <ul *ngIf="taskList.length">
+        <li *ngFor="let item of taskList; let i = index">
+            <input class="box" type="checkbox" [(ngModel)]="item.checked">
+            <input class="txt" type="text" [(ngModel)]="item.task">
             <button>
                 <img src="../../../../../assets/icons/icon-trash.svg" alt="trash">
             </button>
@@ -12,4 +12,4 @@
 
 
 <app-todo-input-add-items></app-todo-input-add-items>
-<app-to-do-button-delete-all></app-to-do-button-delete-all>
+<app-to-do-button-delete-all *ngIf="taskList.length"></app-to-do-button-delete-all>
