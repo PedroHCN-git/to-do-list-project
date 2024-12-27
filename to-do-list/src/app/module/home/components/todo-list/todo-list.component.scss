@@ -5,6 +5,7 @@ div{
     background-color: $tertiary-color;
     margin-top: 20px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+    height: 400px;
 
     &.loading{
         background-image: url(../../../../../assets/img/bg_task.png);
@@ -15,7 +16,6 @@ div{
 
 ul{
     padding: 20px;
-    height: 400px;
 
     li{
         list-style: none;
